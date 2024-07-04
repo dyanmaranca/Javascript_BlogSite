@@ -1,0 +1,171 @@
+/* PAGE LAYOUT*/
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* HEADER */
+
+header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+header img {
+    width: 50px;
+    height: 50px;
+    flex-basis: 5%;
+}
+.tagline {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FBC951;
+    color: #452E37;
+    padding: 16px 20px;
+    flex-basis: 95%;
+}
+
+.adminlogin {
+    text-align: right;
+    padding: 0 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#452E37;
+}
+
+.adminlogin a {
+    text-decoration: none; 
+}
+
+/* MAIN */
+
+.navmain {
+    display: flex;
+}
+
+.navmain main {
+    text-align: center;
+}
+
+main h2, main h4 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+
+nav {
+    flex: 1;
+    padding: 15px 0;
+    border: 1px solid #202338;
+    margin-right: 10px;
+}
+
+nav a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #202338;
+    text-decoration: none; 
+    margin:auto;
+}
+
+nav ul {
+    list-style-type: none;
+    line-height: 20px;
+}
+
+nav > ul > li a:hover {
+    color: blue;
+}
+
+/* CONTENT */
+
+main {
+    flex: 5;
+    border: 1px solid #202338;
+}
+
+/* LOGIN FORM */
+
+.loginform {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 30px;
+    margin: 10px auto;
+}
+
+.loginform h3 {
+    text-align: center;
+}
+
+.login {
+    background-color: #202338;
+    color: white;
+    width: 100px;
+    margin: 10px auto;
+}
+
+.loginerror {
+    color:red;
+    font-size: 12px;
+    line-height: 1px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    background-color: #202338;
+    color: white;
+    padding: 2px;
+    margin: 10px auto;
+}
+
+.addpage {
+    margin: 20px;
+    line-height: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.wrapper {
+    display: block;
+}
+
+.wrapper input[type=text] {
+    width: 90%;
+}
+
+.adderrors {
+    color:red;
+    font-size: 12px;
+    line-height: 1px;
+    font-weight: lighter;
+    text-align: left;
+}
+
+/* EDIT PAGES */
+
+table, th, td {
+    border: 2px solid grey; 
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.edittable {
+    margin: 20px auto;
+    width: 500px;
+}
+
+.blogbody {
+    margin: 20px;
+    align-content: center;
+}
+
+.blogbody img {
+    width: 700px;
+}

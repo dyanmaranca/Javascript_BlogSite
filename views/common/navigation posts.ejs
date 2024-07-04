@@ -1,0 +1,11 @@
+<nav>
+    <ul>
+    <%
+      for(var post of posts){
+        %>
+            <li><a href="/blogpost/<%= post._id %>"><%= post.title %></a></li>
+        <%
+      }
+    %>
+    </ul>
+</nav>

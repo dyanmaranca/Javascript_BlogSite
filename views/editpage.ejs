@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Page</title>
+    <link rel="stylesheet" href="/css/normalizedm.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tiny.cloud/1/vle74anow2fmw5nkg95d2ap0u6uawq6jfmm3paygeu5fbbo4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        tinymce.init({
+          selector: '#content',
+          height: 500,
+          menubar: false,
+          forced_root_block : "",
+          newline_behavior: 'linebreak'
+        });
+      </script>
+</head>
+<body>
+    <div class="container">
+    <!-- Add header and navigation -->
+    <%- include ('common/header.ejs') %>
+
+    <p class="adminlogin">Welcome, Admin </p>
+
+    <div class="navmain">
+        <%- include ('common/navigation admin.ejs') %>
+        <main>
+            <h2>Edit Page</h2>
+            <div class="adderrors">
+            </div>
+            <div class="addpage">
+            <form method="post" action="/editsuccess" enctype="multipart/form-data">
+                <input type="text" id="id" name="id" value="<%=post.id%>" hidden><br>
+                <div class="wrapper">
+                <label for="title">Page Title</label>
+                <input type="text" id="title" name="title" value="<%=post.title%>"><br>
+                </div>
+                <div class="wrapper">
+                <label for="image">Image</label>
+                <input type="file" id="image" name="image" value="<%= post.image.name %>"><br>
+                </div>
+                <div class="wrapper">
+                <input type="text" id="content" name="content" value="<%=post.content%>"> <br>
+                <input type="submit" value="Submit">
+                </div>
+            </form>
+            </div>
+        </main>
+
+    </div>
+    <!-- Add footer -->
+    <%- include ('common/footer.ejs') %>
+    </div>
+</body>
+</html>

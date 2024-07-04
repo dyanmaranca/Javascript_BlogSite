@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="css/normalizedm.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tiny.cloud/1/vle74anow2fmw5nkg95d2ap0u6uawq6jfmm3paygeu5fbbo4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <!-- Add header and navigation -->
+    <%- include ('common/header.ejs') %>
+
+    <p class="adminlogin">Welcome, Admin</p>
+
+    <div class="navmain">
+        <%- include ('common/navigation admin.ejs') %>
+        <main>
+            <h2>Edit Pages</h2>
+
+            <table class="edittable">
+                <tr>
+                    <th>Page</th>
+                    <th>Manage</th>
+                    <th>Manage</th>
+                </tr>
+                <% if( typeof(post) != 'undefined' ){ 
+                    for(let x in post){ %>
+                  <tr>
+                    <td><%= post[x].title %></td>
+                    <td><a href="/editpage/<%= post[x]._id%>">Edit</td>
+                    <td><a href="/delete/<%= post[x]._id%>">Delete</td>
+                  </tr>
+                  <% } %>  
+                  <% } %>     
+            </table>
+        </main>
+    </div>
+    <!-- Add footer -->
+    <%- include ('common/footer.ejs') %>
+    </div>
+</body>
+</html>

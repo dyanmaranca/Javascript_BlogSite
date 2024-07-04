@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/css/normalizedm.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tiny.cloud/1/vle74anow2fmw5nkg95d2ap0u6uawq6jfmm3paygeu5fbbo4/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Add header and navigation -->
+        <%- include ('common/header.ejs') %>
+    
+        <p class="adminlogin"> <a href="/login">Login</a></p>
+    
+        <div class="navmain">
+            <%- include ('common/navigation posts.ejs') %>
+            <main>
+            <div class="blogbody">
+                <img src="/uploads/<%= data.image %>" alt="<%= data.image %>">
+                <h2><%= data.title %></h2>
+                <p><%= data.content %></p>
+            </div>
+            </main>
+        </div>
+        <!-- Add footer -->
+        <%- include ('common/footer.ejs') %>
+        </div>
+</body>
+</html>
